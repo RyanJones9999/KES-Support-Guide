@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KES Support Guide</title>
+</head>
+<body>
+  <h1>KES Excel Tool - User Guide</h1>
+  <p><a href="KES Update Script - User Guide.pdf" target="_blank">Click here to open the PDF guide</a></p>
+
+  <!-- Optional: Embed the PDF directly -->
+  <embed src="KES_User_Guide.pdf" width="100%" height="600px" type="application/pdf">
+</body>
+</html>
