@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>README.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
+<title>KES Update Script - User Guide.md</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-type"/>
 <style>
 /* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
 /*---------------------------------------------------------------------------------------------
@@ -225,7 +225,6 @@ pre code {
 }
 
 </style>
-
 <style>
 /* Tomorrow Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
@@ -301,7 +300,6 @@ pre code {
 	font-weight: bold;
 }
 </style>
-
 <style>
 /*
  * Markdown PDF CSS
@@ -353,11 +351,30 @@ code {
 }
 
 </style>
-
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</head>
+<style>
+body {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+h1, h2, h3 {
+    color: #003366;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3em;
+}
+a {
+    color: #0055aa;
+    text-decoration: underline;
+}
+</style></head>
 <body>
-  <script>
+<script>
     mermaid.initialize({
       startOnLoad: true,
       theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
@@ -367,7 +384,7 @@ code {
   </script>
 <h1 id="%F0%9F%93%8A-tce---kes-excel-import--export-tool">📊 TCE - KES Excel Import &amp; Export Tool</h1>
 <p>This Python application provides a graphical interface for importing, updating, and exporting project data from Excel files. It is designed to streamline the management of project timelines and audit trails for the <strong>KES (Key Execution Schedule)</strong> system.</p>
-<hr>
+<hr/>
 <h2 id="%F0%9F%A7%B0-features">🧰 Features</h2>
 <ul>
 <li>
@@ -392,31 +409,7 @@ code {
 <li>Exported files are saved in timestamped folders for easy tracking.</li>
 </ul>
 </li>
-<li>
-<p><strong>GUI Interface</strong>:</p>
-<ul>
-<li>Built with <code>tkinter</code> for ease of use.</li>
-<li>Allows users to select files and folders via dialog boxes.</li>
-<li>Displays success and error messages.</li>
 </ul>
-</li>
-</ul>
-<hr>
-<h2 id="%F0%9F%96%A5%EF%B8%8F-requirements">🖥️ Requirements</h2>
-<ul>
-<li>Python 3.7+</li>
-<li>Required packages:
-<ul>
-<li><em>pandas</em></li>
-<li><em>openpyxl</em></li>
-<li><em>tkinter</em> (usually included with Python)</li>
-<li><em>shutil</em>, <em>os</em>, <em>datetime</em>, <em>getpass</em>, <em>pathlib</em></li>
-</ul>
-</li>
-</ul>
-<p>Install dependencies using:</p>
-<pre class="hljs"><code><div>pip install pandas openpyxl tkinter shutil
-</div></code></pre>
 <h2 id="%F0%9F%9A%80-how-to-use">🚀 How to Use</h2>
 <ul>
 <li>
@@ -458,16 +451,6 @@ code {
 <p><strong>Import Files:</strong> Excel files with matching structure to the master file</p>
 </li>
 </ul>
-<h2 id="%F0%9F%A7%A0-key-functions">🧠 Key Functions</h2>
-<ul>
-<li>import_and_update_master_tracker(): Core logic for comparing and updating data.</li>
-<li>create_backup(): Creates a timestamped backup of the master file.</li>
-<li>load_excel_table(): Loads data from Excel, detecting formal tables or scanning ranges.</li>
-<li>process_row(): Compares rows and logs changes.</li>
-<li>update_master_file_with_tables(): Writes updated data and audit logs back to Excel.</li>
-<li>export_project_data_with_date_and_folder(): Exports project-specific data.</li>
-<li>export_grouped_data_by_column(): Generic export function by any column.</li>
-</ul>
 <h2 id="%F0%9F%9B%A1%EF%B8%8F-safety--logging">🛡️ Safety &amp; Logging</h2>
 <ul>
 <li>All changes are logged in the Audit Trail sheet.</li>
@@ -480,23 +463,22 @@ code {
 <li>The tool assumes consistent column names across all files.</li>
 <li>Designed for internal use in project tracking environments.</li>
 </ul>
-<hr>
+<hr/>
 <h2 id="%F0%9F%86%98-support--issues">🆘 Support &amp; Issues</h2>
 <p>If you encounter any issues, bugs, or have suggestions for improvements, please reach out via one of the following methods:</p>
 <ul>
-<li>📧 <strong>Developer Email</strong>: This can be found in the app click the <em>Copy Developer Email</em> button, paste into outlook and send me an email.</li>
-<li>🛠️ <strong>Issue Tracker</strong>: For the moment all issues can be communicated via email or teams. Details on what should be included are below.
-When reporting an issue, please include:
+<li>📧 <strong>Email</strong>: ryan.jones3@macegroup.com</li>
+<li>🛠️ <strong>Issue Tracker</strong>: I will build a form for this to help keep track of any issues, and to make it more simple to report.</li>
+<li>📂 <strong>Logs &amp; Backups</strong>: Check the <em>backups/</em> folder for recovery files in case of unexpected behavior, logs for reporting issues and/ or debugging can be found in the "Logs" folder.</li>
+</ul>
+<p>When reporting an issue, please include:</p>
 <ul>
 <li>A brief description of the problem</li>
 <li>Steps to reproduce the issue</li>
 <li>Any error messages shown</li>
 <li>Screenshots (if applicable)</li>
-</ul>
-</li>
-<li>📂 <strong>Logs &amp; Backups</strong>: Check the <em>backups/</em> folder for recovery files in case of unexpected behavior, logs for reporting issues and/ or debugging can be found in the &quot;Logs&quot; folder.</li>
+<li>The version of Python and operating system you're using</li>
 </ul>
 <p>Thank you for helping improve this tool!</p>
-
 </body>
 </html>
